@@ -127,7 +127,7 @@ def open_main_window():
 
     tk.Button(main, text="BÁN HÀNG", bg="#27ae60", command=lambda: open_sales_window(main), **btn_style).pack(pady=15)
     tk.Button(main, text="QUẢN LÝ NHÂN VIÊN", bg="#3498db", 
-          command=lambda: open_crud_window(main, "NhanVien", 
+          command=lambda: open_crud_window(main, "Nhân Viên", 
           ["ma_nv", "ten_nv", "gioitinh", "dia_chi", "sdt", "chuc_vu"], 
           ["Mã NV", "Họ tên", "Giới tính", "Địa chỉ", "SĐT", "Chức vụ"]), 
           **btn_style).pack(pady=10)
@@ -675,4 +675,5 @@ def open_sales_window(prev):
 
 # ====================== CHẠY CHƯƠNG TRÌNH ======================
 if __name__ == "__main__":
+
     create_login_window()
