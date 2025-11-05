@@ -110,29 +110,7 @@ def create_login_window():
     entry_user.bind("<Return>", lambda e: entry_pass.focus())
 
     tk.Label(login_window, text="© 2025 Hệ thống quản lý bán hàng", font=("Time New Roman", 9), bg="#ffffff", fg="#95a5a6").pack(side="bottom", pady=20)
-    login_window.mainloop()
-
-# ====================== FORM CHÍNH ======================
-def open_main_window():
-    main = tk.Tk()
-    main.title("HỆ THỐNG QUẢN LÝ BÁN HÀNG")
-    main.geometry("900x550")
-    center_window(main, 900, 550)
-    main.configure(bg="#f8f9fa")
-
-    tk.Label(main, text="HỆ THỐNG QUẢN LÝ BÁN HÀNG", font=("Time New Roman", 24, "bold"), bg="#f8f9fa", fg="#2c3e50").pack(pady=40)
-    tk.Label(main, text="Chào mừng bạn đến với hệ thống POS!", font=("Time New Roman", 14), bg="#f8f9fa", fg="#34495e").pack(pady=10)
-
-    btn_style = {"font": ("Time New Roman", 14, "bold"), "width": 30, "height": 2, "fg": "white"}
-
-    tk.Button(main, text="BÁN HÀNG", bg="#27ae60", command=lambda: open_sales_window(main), **btn_style).pack(pady=15)
-    tk.Button(main, text="QUẢN LÝ NHÂN VIÊN", bg="#3498db", 
-          command=lambda: open_crud_window(main, "NhanVien", 
-          ["ma_nv", "ten_nv", "gioitinh", "dia_chi", "sdt", "chuc_vu"], 
-          ["Mã NV", "Họ tên", "Giới tính", "Địa chỉ", "SĐT", "Chức vụ"]), 
-          **btn_style).pack(pady=10)
-    tk.Button(main, text="QUẢN LÝ SẢN PHẨM", bg="#e67e22", command=lambda: open_crud_window(main, "SanPham", ["ma_sp", "ten_sp", "loai_sp", "mo_ta", "gia", "so_luong_ton"], ["Mã SP", "Tên SP", "Loại", "Mô tả", "Giá", "Tồn kho"]), **btn_style).pack(pady=10)
-    tk.Button(main, text="QUẢN LÝ KHÁCH HÀNG", bg="#9b59b6", command=lambda: open_crud_window(main, "KhachHang", ["ma_kh", "ten_kh", "dia_chi", "sdt_kh"], ["Mã KH", "Tên KH", "Địa chỉ", "SĐT"]), **btn_style).pack(pady=10)
+    login_window.maiHàng", ["ma_kh", "ten_kh", "dia_chi", "sdt_kh"], ["Mã KH", "Tên KH", "Địa chỉ", "SĐT"]), **btn_style).pack(pady=10)
 
     main.mainloop()
 
@@ -675,4 +653,5 @@ def open_sales_window(prev):
 
 # ====================== CHẠY CHƯƠNG TRÌNH ======================
 if __name__ == "__main__":
+
     create_login_window()
